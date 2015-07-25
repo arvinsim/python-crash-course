@@ -255,12 +255,14 @@
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h4>None</h4>
+                    <section>
+                        <pre><code class="python">
     # None is an object
     None  # => None
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Don't use the equality "==" symbol to compare objects to None
     # Use "is" instead
     "etc" is None   # => False
@@ -269,14 +271,15 @@
     # The 'is' operator tests for object identity. This isn't
     # very useful when dealing with primitive values, but is
     # very useful when dealing with objects.
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # None, 0, and empty strings/lists all evaluate to False.
     # All other values are True
     bool(0)     # => False
     bool("")    # => False
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -288,28 +291,30 @@
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h4>Variables</h4>
+                    <section>
+                        <pre><code class="python">
     # Python has a print statement
     print "I'm Python. Nice to meet you!"
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # No need to declare variables before assigning to them.
     # Convention is to use lower_case_with_underscores
     some_var = 5
     some_var  # => 5
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Accessing a previously unassigned variable is an exception.
-    # See Control Flow to learn more about exception handling.
     some_other_var  # Raises a name error
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # if can be used as an expression
     "yahoo!" if 3 > 2 else 2  # => "yahoo!"
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -317,15 +322,17 @@
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h4>Lists</h4>
+                    <section>
+                        <pre><code class="python">
     # Lists store sequences
     li = []
 
     # You can start with a prefilled list
     other_li = [4, 5, 6]
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Add stuff to the end of a list with append
     li.append(1)    # li is now [1]
     li.append(2)    # li is now [1, 2]
@@ -337,11 +344,11 @@
 
     # Let's put it back
     li.append(3)    # li is now [1, 2, 4, 3] again.
-                    </code></pre>
-                </section>
+                        </code></pre>
+                    </section>
 
-                <section>
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     # Access a list like you would any array
     li[0]  # => 1
 
@@ -353,13 +360,13 @@
 
     # Look at the last element
     li[-1]  # => 3
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Looking out of bounds is an IndexError
     li[4]  # Raises an IndexError
-                    </code></pre>
-
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -367,9 +374,14 @@
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h4>Slices</h4>
+                    <section>
+                        <pre><code class="python">
     # You can look at ranges with slice syntax.
     # (It's a closed/open range for you mathy types.)
+
+    # Given this list
+    # li = [1,2,4,3]
     li[1:3]  # => [2, 4]
 
     # Omit the beginning
@@ -383,16 +395,21 @@
 
     # Reverse a copy of the list
     li[::-1]   # => [3, 4, 2, 1]
-                    </code></pre>
+                        </code></pre>
+                   </section>
 
-                    <pre><code class="python">
+                   <section>
+                        <pre><code class="python">
     # Use any combination of these to make advanced slices
     # li[start:end:step]
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h4>More on lists</h4>
+                    <section>
+                        <pre><code class="python">
     # Remove arbitrary elements from a list with "del"
     del li[2]   # li is now [1, 2, 3]
 
@@ -400,22 +417,23 @@
     li + other_li   # => [1, 2, 3, 4, 5, 6]
 
     # Note: values for li and for other_li are not modified.
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Concatenate lists with "extend()"
     li.extend(other_li)   # Now li is [1, 2, 3, 4, 5, 6]
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Check for existence in a list with "in"
     1 in li   # => True
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Examine the length with "len()"
     len(li)   # => 6
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -423,22 +441,24 @@
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h4>Tuples</h4>
+                    <section>
+                        <pre><code class="python">
     # Tuples are like lists but are immutable.
     tup = (1, 2, 3)
     tup[0]   # => 1
     tup[0] = 3  # Raises a TypeError
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # You can do all those list thingies on tuples too
     len(tup)   # => 3
     tup + (4, 5, 6)   # => (1, 2, 3, 4, 5, 6)
     tup[:2]   # => (1, 2)
     2 in tup   # => True
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # You can unpack tuples (or lists) into variables
     a, b, c = (1, 2, 3)     # a is now 1, b is now 2 and c is now 3
 
@@ -447,7 +467,8 @@
 
     # Now look how easy it is to swap two values
     e, d = d, e     # d is now 5 and e is now 4
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -455,50 +476,52 @@
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h4>Dictionaries</h4>
+                    <section>
+                        <pre><code class="python">
     # Dictionaries store mappings
     empty_dict = {}
 
     # Here is a prefilled dictionary
     filled_dict = {"one": 1, "two": 2, "three": 3}
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Look up values with []
     filled_dict["one"]   # => 1
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Get all keys as a list with "keys()"
     filled_dict.keys()   # => ["three", "two", "one"]
 
     # Note - Dictionary key ordering is not guaranteed.
     # Your results might not match this exactly.
-                    </code></pre>
-                </section>
+                        </code></pre>
+                    </section>
 
-                <section>
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     # Get all values as a list with "values()"
     filled_dict.values()   # => [3, 2, 1]
 
     # Note - Same as above regarding key ordering.
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Check for existence of keys in a dictionary with "in"
     "one" in filled_dict    # => True
     1 in filled_dict        # => False
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Looking up a non-existing key is a KeyError
     filled_dict["four"]   # KeyError
-                    </code></pre>
-                </section>
+                        </code></pre>
+                    </section>
 
-                <section>
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     # Use "get()" method to avoid the KeyError
     filled_dict.get("one")   # => 1
     filled_dict.get("four")   # => None
@@ -510,16 +533,16 @@
 
     # note that filled_dict.get("four") is still => None
     # (get doesn't set the value in the dictionary)
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # set the value of a key with a syntax similar to lists
     filled_dict["four"] = 4  # now, filled_dict["four"] => 4
-                    </code></pre>
-                 </section>
+                        </code></pre>
+                     </section>
 
-                <section>
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     # "setdefault()" inserts into a dictionary
     # only if the given key isn't present
 
@@ -528,7 +551,8 @@
 
     # filled_dict["five"] is still 5
     filled_dict.setdefault("five", 6)
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -536,7 +560,9 @@
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h4>Sets</h4>
+                    <section>
+                        <pre><code class="python">
     # Sets store ... well sets (which are like lists but can
     # contain no duplicates)
     empty_set = set()
@@ -545,51 +571,52 @@
 
     # some_set is now set([1, 2, 3, 4])
     some_set = set([1, 2, 2, 3, 4])
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # order is not guaranteed, even though it may sometimes
     # look sorted
 
     # another_set is now set([1, 2, 3, 4])
     another_set = set([4, 3, 2, 2, 1])
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Since Python 2.7, {} can be used to declare a set
     filled_set = {1, 2, 2, 3, 4}   # => {1, 2, 3, 4}
-                    </code></pre>
-                </section>
+                        </code></pre>
+                    </section>
 
-                <section>
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     # Add more items to a set
     filled_set.add(5)   # filled_set is now {1, 2, 3, 4, 5}
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Do set intersection with &
     other_set = {3, 4, 5, 6}
     filled_set & other_set   # => {3, 4, 5}
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Do set union with |
     filled_set | other_set   # => {1, 2, 3, 4, 5, 6}
-                    </code></pre>
-                </section>
+                        </code></pre>
+                    </section>
 
-                <section>
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     # Do set difference with -
     {1, 2, 3, 4} - {2, 3, 5}   # => {1, 4}
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Check for existence in a set with in
     2 in filled_set   # => True
     10 in filled_set   # => False
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -601,12 +628,14 @@
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h4>Conditionals</h4>
+                    <section>
+                        <pre><code class="python">
     # Let's just make a variable
     some_var = 5
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Here is an if statement.
     # Indentation is significant in Python!
 
@@ -619,7 +648,8 @@
         print "some_var is indeed 10."
 
     # There is no switch statement in Python
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -627,7 +657,9 @@
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h4>Loops</h4>
+                    <section>
+                        <pre><code class="python">
     """
     For loops iterate over lists
     prints:
@@ -636,13 +668,13 @@
     mouse is a mammal
     """
     for animal in ["dog", "cat", "mouse"]:
-        # You can use {0} to interpolate formatted strings. (See above.)
+        # You can use {0} to interpolate formatted strings
         print "{0} is a mammal".format(animal)
-                    </code></pre>
-                </section>
+                        </code></pre>
+                    </section>
 
-                <section>
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     """
     "range(number)" returns a list of numbers
     from zero to the given number
@@ -654,9 +686,11 @@
     """
     for i in range(4):
         print i
-                    </code></pre>
+                        </code></pre>
+                    </section>
 
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     """
     "range(lower, upper)" returns a list of numbers
     from the lower number to the upper number
@@ -668,12 +702,12 @@
     """
     for i in range(4, 8):
         print i
-                    </code></pre>
+                        </code></pre>
 
-                </section>
+                    </section>
 
-                <section>
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     """
     While loops go until a condition is no longer met.
     prints:
@@ -686,7 +720,8 @@
     while x < 4:
         print x
         x += 1  # Shorthand for x = x + 1
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -694,7 +729,9 @@
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h4>Exceptions</h4>
+                    <section>
+                        <pre><code class="python">
     try:
         # Use "raise" to raise an error
         raise IndexError("This is an index error")
@@ -709,7 +746,8 @@
         # Must follow all except blocks
         # Runs only if the code in try raises no exceptions
         print "All good!"
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -717,27 +755,39 @@
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h3>Basics</h3>
+                </section>
+
+                <section>
+                    <h4>Basics</h4>
+                    <section>
+                        <pre><code class="python">
     # Use "def" to create new functions
     def add(x, y):
         print "x is {0} and y is {1}".format(x, y)
         return x + y    # Return values with a return statement
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Calling functions with parameters
     add(5, 6)   # => prints out "x is 5 and y is 6" and returns 11
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Another way to call functions is with keyword arguments
     add(y=6, x=5)   # Keyword arguments can arrive in any order.
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
+                <section>
+                    <h3>Variable Arguments</h3>
+                </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h4>Variable Arguments</h4>
+                    <section>
+                        <pre><code class="python">
     # You can define functions that take a variable number of
     # positional args, which will be interpreted as a tuple
     # if you do not use the *
@@ -745,26 +795,26 @@
         return args
 
     varargs(1, 2, 3)   # => (1, 2, 3)
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # You can define functions that take a variable number of
     # keyword args, as well, which will be interpreted as a map
     # if you do not use **
     def keyword_args(**kwargs):
         return kwargs
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Let's call it to see what happens
 
     # {"big": "foot", "loch": "ness"}
     keyword_args(big="foot", loch="ness")
-                    </code></pre>
-                </section>
+                        </code></pre>
+                    </section>
 
-                <section>
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     # You can do both at once, if you like
     def all_the_args(*args, **kwargs):
         print args
@@ -774,9 +824,9 @@
     (1, 2)
     {"a": 3, "b": 4}
     """
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # When calling functions, you can do the
     # opposite of args/kwargs!
     # Use * to expand positional args
@@ -787,22 +837,29 @@
     all_the_args(**kwargs)  # equivalent to foo(a=3, b=4)
     # equivalent to foo(1, 2, 3, 4, a=3, b=4)
     all_the_args(*args, **kwargs)
-                    </code></pre>
-                </section>
+                        </code></pre>
+                    </section>
 
-                <section>
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     # you can pass args and kwargs along to other functions that
     # take args/kwargs by expanding them with * and ** respectively
     def pass_all_the_args(*args, **kwargs):
         all_the_args(*args, **kwargs)
         print varargs(*args)
         print keyword_args(**kwargs)
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h3>Scope</h3>
+                </section>
+
+                <section>
+                    <h4>Scope</h4>
+                    <section>
+                        <pre><code class="python">
     # Function Scope
     x = 5
 
@@ -819,11 +876,18 @@
 
     setX(43)
     setGlobalX(6)
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h3>More on functions</h3>
+                </section>
+
+                <section>
+                    <h4>More on functions</h4>
+                    <section>
+                        <pre><code class="python">
     # Python has first class functions
     def create_adder(x):
         def adder(y):
@@ -832,26 +896,27 @@
 
     add_10 = create_adder(10)
     add_10(3)   # => 13
-                    </code></pre>
-                </section>
+                        </code></pre>
+                    </section>
 
-                <section>
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     # There are also anonymous functions
     (lambda x: x > 2)(3)   # => True
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # There are built-in higher order functions
     map(add_10, [1, 2, 3])                     # => [11, 12, 13]
     filter(lambda x: x > 5, [3, 4, 5, 6, 7])   # => [6, 7]
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # We can use list comprehensions for nice maps and filters
     [add_10(i) for i in [1, 2, 3]]          # => [11, 12, 13]
     [x for x in [3, 4, 5, 6, 7] if x > 5]   # => [6, 7]
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -859,63 +924,83 @@
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h3>Defining a class</h3>
+                </section>
+
+                <section>
+                    <h4>Defining a class</h4>
+                    <section>
+                        <pre><code class="python">
     # We subclass from object to get a class.
     class Human(object):
-        # A class attribute. It is shared by all instances of this class
+        # A class attribute.
+        # It is shared by all instances of this class
         species = "H. sapiens"
 
-        # Basic initializer, this is called when this class is instantiated.
-        # Note that the double leading and trailing underscores denote objects
-        # or attributes that are used by python but that live in user-controlled
-        # namespaces. You should not invent such names on your own.
+        # Basic initializer, this is called when this
+        # class is instantiated. Note that the double
+        # leading and trailing underscores denote objects
+        # or attributes that are used by python but that
+        # live in user-controlled namespaces. You should
+        # not invent such names on your own.
         def __init__(self, name):
-        # Assign the argument to the instance's name attribute
-        self.name = name
+            # Assign the argument to the instance's name attribute
+            self.name = name
 
-        # An instance method. All methods take "self" as the first argument
+        # An instance method. All methods take "self" as
+        # the first argument
         def say(self, msg):
             return "{0}: {1}".format(self.name, msg)
 
         # A class method is shared among all instances
-        # They are called with the calling class as the first argument
+        # They are called with the calling class as
+        # the first argument
         @classmethod
         def get_species(cls):
             return cls.species
 
-        # A static method is called without a class or instance reference
+        # A static method is called without a class or
+        # instance reference
         @staticmethod
         def grunt():
             return "*grunt*"
-                    </code></pre>
+                        </code></pre>
+                     </section>
                  </section>
 
                  <section>
-                    <pre><code class="python">
+                    <h3>More on classes</h3>
+                 </section>
+
+                 <section>
+                     <h4>More on classes</h4>
+                     <section>
+                        <pre><code class="python">
     # Instantiate a class
     i = Human(name="Ian")
     print i.say("hi")     # prints out "Ian: hi"
 
     j = Human("Joel")
     print j.say("hello")  # prints out "Joel: hello"
-                    </code></pre>
+                        </code></pre>
 
-                <pre><code class="python">
+                    <pre><code class="python">
     # Call our class method
     i.get_species()   # => "H. sapiens"
-                </code></pre>
+                    </code></pre>
 
-                <pre><code class="python">
+                    <pre><code class="python">
     # Change the shared attribute
     Human.species = "H. neanderthalensis"
     i.get_species()   # => "H. neanderthalensis"
     j.get_species()   # => "H. neanderthalensis"
-                </code></pre>
+                    </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # Call the static method
     Human.grunt()   # => "*grunt*"
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -923,28 +1008,30 @@
                 </section>
 
                 <section>
-                    <pre><code class="python">
+                    <h3>Modules</h3>
+                    <section>
+                        <pre><code class="python">
     # You can import modules
     import math
     print math.sqrt(16)  # => 4
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # You can get specific functions from a module
     from math import ceil, floor
     print ceil(3.7)  # => 4.0
     print floor(3.7)   # => 3.0
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # You can import all functions from a module.
     # Warning: this is not recommended
     from math import *
-                    </code></pre>
-                </section>
+                        </code></pre>
+                    </section>
 
-                <section>
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     # You can shorten module names
     import math as m
     math.sqrt(16) == m.sqrt(16)   # => True
@@ -952,20 +1039,23 @@
     # you can also test that the functions are equivalent
     from math import sqrt
     math.sqrt == m.sqrt == sqrt  # => True
-                    </code></pre>
+                        </code></pre>
+                    </section>
 
-                    <pre><code class="python">
+                    <section>
+                        <pre><code class="python">
     # Python modules are just ordinary python files. You
     # can write your own, and import them. The name of the
     # module is the same as the name of the file.
-                    </code></pre>
+                        </code></pre>
 
-                    <pre><code class="python">
+                        <pre><code class="python">
     # You can find out which functions and attributes
     # defines a module.
     import math
     dir(math)
-                    </code></pre>
+                        </code></pre>
+                    </section>
                 </section>
 			</div>
 		</div>
