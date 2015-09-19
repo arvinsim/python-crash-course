@@ -60,7 +60,7 @@
                         <li>Control Flow</li>
                         <li>Functions</li>
                         <li>Classes</li>
-                        <li>Modules</li>
+                        <li>Modules and Packages</li>
                     </ul>
                 </section>
 
@@ -1148,7 +1148,7 @@
                 </section>
 
                 <section>
-                    <h2>Modules</h2>
+                    <h2>Modules and Packages</h2>
                 </section>
 
                 <section>
@@ -1198,6 +1198,44 @@
     # defines a module.
     import math
     dir(math)
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Packages</h3>
+
+                    <section>
+                        <pre><code>
+    # Packages are namespaces which contain multiple packages
+    # and modules themselves. They are simply directories,
+    # but with a twist.
+                        </code></pre>
+                        <pre><code>
+    # Each package in Python is a directory which MUST contain
+    # a special file called __init__.py
+    #
+    #        physics/
+    #            __init__.py
+    #            classical.py
+    #            thermodynamics.py
+    #            electromagnetism.py
+    #            relativity.py
+    #            quantum.py
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code>
+    # __init__.py indicates that the directory is a Python package.
+    # Python packages can be imported the same way a module
+    # can be imported.
+                        </code></pre>
+                        <pre><code>
+    import physics.quantum
+                        </code></pre>
+                        <pre><code>
+    from physics.quantum import wave
                         </code></pre>
                     </section>
                 </section>
