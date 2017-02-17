@@ -1,0 +1,1416 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>A Crash Course on Python</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="revealjs/css/reveal.css">
+		<link rel="stylesheet" href="revealjs/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="revealjs/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<section class="slides">
+				<section>
+					<h1>Python Essentials</h1>
+				</section>
+
+                <section>
+                    <h4>Introduction to Python</h4>
+                    <ul>
+                        <li>What is Python?</li>
+                        <li>The Zen of Python</li>
+                        <li>Organizations and sites that use Python</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4>Python Syntax</h4>
+                    <ul>
+                        <li>Comments</li>
+                        <li>Primitive Datatypes and Operators</li>
+                        <li>Variables and Collections</li>
+                        <li>Control Flow</li>
+                        <li>Functions</li>
+                        <li>Classes</li>
+                        <li>Modules and Packages</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4>Pip</h4>
+                    <ul>
+                        <li>What are Package Managers?</li>
+                        <li>What is Pip?</li>
+                        <li>Installation</li>
+                        <li>Commands</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4>What is Python?</h4>
+                </section>
+
+                <section>
+                    <h4>What is Python?</h4>
+
+                    <section>
+                        Python is created by Guido van Rossum, a Dutch computer programmer. <br /><br />He was employed by Google from 2005 until December 7 2012, where he spent half his time developing the Python language. In January 2013, Van Rossum started working on Dropbox.
+                    </section>
+
+                    <section>
+                        In the Python community, Van Rossum is known as a Benevolent Dictator For Life(BDFL), meaning that he continues to oversee the Python development process, making decisions where necessary.
+                    </section>
+
+                    <section>
+                        Python gets its name from the comedy group, Monty Python. <br /><br />They created the sketch comedy show Monty Python's Flying Circus, that first aired on the BBC on October 5, 1969.
+                    </section>
+
+                    <section>
+                        Python is a multi-paradigm programming language. Object-Oriented and Structured Programming is fully supported. <br /><br />Some Functional Programming features are supported.
+                    </section>
+
+                    <section>
+                        Python uses dynamic typing.
+                    </section>
+
+                    <section>
+                        Braces is not used to denote blocks in Python. Python uses whitespace for that. <br /><br />Suffice to say, whitespace is significant in Python.
+                    </section>
+                </section>
+
+                <section>
+                    <h4>The Zen of Python</h4>
+
+                    <section>
+                        Beautiful is better than ugly.
+                    </section>
+
+                    <section>
+                        Explicit is better than implicit.
+                    </section>
+
+                    <section>
+                        Simple is better than complex.
+                    </section>
+
+                    <section>
+                        Complex is better than complicated.
+                    </section>
+
+                    <section>
+                        Readability counts.
+                    </section>
+
+                    <section>
+                        Errors should never pass silently.
+                    </section>
+
+                    <section>
+                        There should be one, and preferably only one, obvious way to do it...
+                    </section>
+
+                    <section>
+                        ...although that way may not be obvious at first unless you're Dutch. :D
+                    </section>
+                </section>
+
+                <section>
+                    <h4>Organizations and sites that use Python</h4>
+
+                    <section>
+                        <dl>
+                            <dt>Google</dt>
+                            <dd>Many components of the Google spider and search engine are written in Python</dd>
+                        </dl>
+                    </section>
+
+                    <section>
+                        <dl>
+                            <dt>Civilization 4</dt>
+                            <dd>The new addition to the legendary strategy game series has all its inner logic, including AI, implemented in Python. The interface is exposed, so the modding community can easily take advantage of it.</dd>
+                        </dl>
+                    </section>
+
+                    <section>
+                        <dl>
+                            <dt>Industrial Light & Magic</dt>
+                            <dd>ILM uses Python in the production of their FX, as described in the RenderMan Course Notes from Siggraph 2001 (they name "The Phantom Menace", "The Mummy Returns" and other productions as ones where Python was used...).</dd>
+                        </dl>
+                    </section>
+
+                    <section>
+                        <dl>
+                            <dt>Walt Disney Feature Animation</dt>
+                            <dd>Walt Disney Feature Animation is also using Python to add scriptability to their animation production system.</dd>
+                        </dl>
+                    </section>
+
+                    <section>
+                        <dl>
+                            <dt>Blender 3D</dt>
+                            <dd>The 3D modeling program Blender 3D makes use of Python as an extension language.</dd>
+                        </dl>
+                    </section>
+
+                    <section>
+                        <ul>
+                            <li>Reddit(uses Pylons Framework)</li>
+                            <li>Instagram(uses Django Framework)</li>
+                            <li>Pinterest(uses Django Framework)</li>
+                            <li>Youtube</li>
+                            <li>Yahoo Maps!</li>
+                            <li>Dropbox</li>
+                            <li>Quora</li>
+                            <li>...and many more</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Python Syntax</h2>
+                </section>
+
+				<section>
+					<h2>Comments</h2>
+				</section>
+
+                <section>
+                    <h4>Comments</h4>
+
+                    <section>
+                        <pre><code class="python">
+    # Single line comments start with a number symbol.
+                        </code></pre>
+
+                        <pre><code class="python">
+    """ Multiline strings can be written
+    using three "s, and are often used
+    as comments
+    """
+                        </code></pre>
+                    </section>
+                </section>
+
+				<section>
+					<h2>Primitive Datatypes and Operators</h2>
+				</section>
+
+				<section>
+					<h3>Numbers</h3>
+				</section>
+
+                <section>
+                    <h4>Numbers</h4>
+                    <section>
+                        <pre><code class="python">
+    # You have numbers
+    3  # => 3
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Math is what you would expect
+    1 + 1   # => 2
+    8 - 1   # => 7
+    10 * 2  # => 20
+    35 / 5  # => 7
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Division is a bit tricky.
+    # It is integer division and floors the results automatically.
+    5 / 2  # => 2
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # To fix division we need to learn about floats.
+    2.0         # This is a float
+    11.0 / 4.0  # => 2.75 ahhh...much better
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Result of integer division truncated down both for
+    # positive and negative.
+    5 // 3      # => 1
+    5.0 // 3.0  # => 1.0 # works on floats too
+    -5 // 3     # => -2
+    -5.0 // 3.0 # => -2.0
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Modulo operation
+    7 % 3 # => 1
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # Exponentiation (x to the yth power)
+    2**4 # => 16
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Enforce precedence with parentheses
+    (1 + 3) * 2  # => 8
+                        </code></pre>
+                    </section>
+                </section>
+
+
+				<section>
+					<h3>Boolean</h3>
+				</section>
+
+                <section>
+                    <h4>Boolean</h4>
+                    <section>
+                        <pre><code class="python">
+    # Boolean Operators
+    # Note "and" and "or" are case-sensitive
+    True and False #=> False
+    False or True #=> True
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Note using Bool operators with ints
+    0 and 2 #=> 0
+    -5 or 0 #=> -5
+    0 == False #=> True
+    2 == True #=> False
+    1 == True #=> True
+                        </code></pre>
+
+                        <pre><code class="python">
+    # negate with not
+    not True  # => False
+    not False  # => True
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # Equality is ==
+    1 == 1  # => True
+    2 == 1  # => False
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Inequality is !=
+    1 != 1  # => False
+    2 != 1  # => True
+                        </code></pre>
+
+                        <pre><code class="python">
+    # More comparisons
+    1 < 10  # => True
+    1 > 10  # => False
+    2 <= 2  # => True
+    2 >= 2  # => True
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Comparisons can be chained!
+    1 < 2 < 3  # => True
+    2 < 3 < 2  # => False
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Strings</h3>
+                </section>
+
+                <section>
+                    <h4>Strings</h4>
+                    <section>
+                        <pre><code class="python">
+    # Strings are created with " or '
+    "This is a string."
+    'This is also a string.'
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Strings can be added too!
+    "Hello " + "world!"  # => "Hello world!"
+
+    # Strings can be added without using '+'
+    "Hello " "world!"  # => "Hello world!"
+                        </code></pre>
+
+                        <pre><code class="python">
+    # ... or multiplied
+    "Hello" * 3  # => "HelloHelloHello"
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # A string can be treated like a list of characters
+    "This is a string"[0]  # => 'T'
+                        </code></pre>
+
+                        <pre><code class="python">
+    # % can be used to format strings, like this:
+    "%s can be %s" % ("strings", "interpolated")
+                        </code></pre>
+
+                        <pre><code class="python">
+    # A newer way to format strings is the format method.
+    # This method is the preferred way
+    "{0} can be {1}".format("strings", "formatted")
+
+    # You can use keywords if you don't want to count.
+    "{name} wants to eat {food}".format(name="Bob", food="lasagna")
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>None</h3>
+                </section>
+
+                <section>
+                    <h4>None</h4>
+                    <section>
+                        <pre><code class="python">
+    # None is an object
+    None  # => None
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Don't use the equality "==" symbol to compare objects to None
+    # Use "is" instead
+    "etc" is None   # => False
+    None is None    # => True
+
+    # The 'is' operator tests for object identity. This isn't
+    # very useful when dealing with primitive values, but is
+    # very useful when dealing with objects.
+                        </code></pre>
+
+                        <pre><code class="python">
+    # None, 0, and empty strings/lists all evaluate to False.
+    # All other values are True
+    bool(0)     # => False
+    bool("")    # => False
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Variables and Collections</h2>
+                </section>
+
+                <section>
+                    <h3>Variables</h3>
+                </section>
+
+                <section>
+                    <h4>Variables</h4>
+                    <section>
+                        <pre><code class="python">
+    # Python has a print statement
+    print "I'm Python. Nice to meet you!"
+                        </code></pre>
+
+                        <pre><code class="python">
+    # No need to declare variables before assigning to them.
+    # Convention is to use lower_case_with_underscores
+    some_var = 5
+    some_var  # => 5
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Accessing a previously unassigned variable is an exception.
+    some_other_var  # Raises a name error
+                        </code></pre>
+
+                        <pre><code class="python">
+    # if can be used as an expression
+    "yahoo!" if 3 > 2 else 2  # => "yahoo!"
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Lists</h3>
+                </section>
+
+                <section>
+                    <h4>Lists</h4>
+                    <section>
+                        <pre><code class="python">
+    # Lists store sequences
+    li = []
+
+    # You can start with a prefilled list
+    other_li = [4, 5, 6]
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Add stuff to the end of a list with append
+    li.append(1)    # li is now [1]
+    li.append(2)    # li is now [1, 2]
+    li.append(4)    # li is now [1, 2, 4]
+    li.append(3)    # li is now [1, 2, 4, 3]
+
+    # Remove from the end with pop
+    li.pop()        # => 3 and li is now [1, 2, 4]
+
+    # Let's put it back
+    li.append(3)    # li is now [1, 2, 4, 3] again.
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # Access a list like you would any array
+    li[0]  # => 1
+
+    # Assign new values to indexes that have already
+    # been initialized with =
+    li[0] = 42
+    li[0]       # => 42
+    li[0] = 1   # Note: setting it back to the original value
+
+    # Look at the last element
+    li[-1]  # => 3
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Looking out of bounds is an IndexError
+    li[4]  # Raises an IndexError
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Slices</h3>
+                </section>
+
+                <section>
+                    <h4>Slices</h4>
+                    <section>
+                        <pre><code class="python">
+    # You can look at ranges with slice syntax.
+    # (It's a closed/open range for you mathy types.)
+
+    # Given this list
+    # li = [1,2,4,3]
+    li[1:3]  # => [2, 4]
+
+    # Omit the beginning
+    li[2:]  # => [4, 3]
+
+    # Omit the end
+    li[:3]  # => [1, 2, 4]
+
+    # Select every second entry
+    li[::2]   # =>[1, 4]
+
+    # Reverse a copy of the list
+    li[::-1]   # => [3, 4, 2, 1]
+                        </code></pre>
+                   </section>
+
+                   <section>
+                        <pre><code class="python">
+    # Use any combination of these to make advanced slices
+    # li[start:end:step]
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h4>More on lists</h4>
+                    <section>
+                        <pre><code class="python">
+    # Remove arbitrary elements from a list with "del"
+    del li[2]   # li is now [1, 2, 3]
+
+    # You can add lists
+    li + other_li   # => [1, 2, 3, 4, 5, 6]
+
+    # Note: values for li and for other_li are not modified.
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Concatenate lists with "extend()"
+    li.extend(other_li)   # Now li is [1, 2, 3, 4, 5, 6]
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Check for existence in a list with "in"
+    1 in li   # => True
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Examine the length with "len()"
+    len(li)   # => 6
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Tuples</h3>
+                </section>
+
+                <section>
+                    <h4>Tuples</h4>
+                    <section>
+                        <pre><code class="python">
+    # Tuples are like lists but are immutable.
+    tup = (1, 2, 3)
+    tup[0]   # => 1
+    tup[0] = 3  # Raises a TypeError
+                        </code></pre>
+
+                        <pre><code class="python">
+    # You can do all those list thingies on tuples too
+    len(tup)   # => 3
+    tup + (4, 5, 6)   # => (1, 2, 3, 4, 5, 6)
+    tup[:2]   # => (1, 2)
+    2 in tup   # => True
+                        </code></pre>
+
+                        <pre><code class="python">
+    # You can unpack tuples (or lists) into variables
+    a, b, c = (1, 2, 3)     # a is now 1, b is now 2 and c is now 3
+
+    # Tuples are created by default if you leave out the parentheses
+    d, e, f = 4, 5, 6
+
+    # Now look how easy it is to swap two values
+    e, d = d, e     # d is now 5 and e is now 4
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Dictionaries</h3>
+                </section>
+
+                <section>
+                    <h4>Dictionaries</h4>
+                    <section>
+                        <pre><code class="python">
+    # Dictionaries store mappings
+    empty_dict = {}
+
+    # Here is a prefilled dictionary
+    filled_dict = {"one": 1, "two": 2, "three": 3}
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Look up values with []
+    filled_dict["one"]   # => 1
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Get all keys as a list with "keys()"
+    filled_dict.keys()   # => ["three", "two", "one"]
+
+    # Note - Dictionary key ordering is not guaranteed.
+    # Your results might not match this exactly.
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # Get all values as a list with "values()"
+    filled_dict.values()   # => [3, 2, 1]
+
+    # Note - Same as above regarding key ordering.
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Check for existence of keys in a dictionary with "in"
+    "one" in filled_dict    # => True
+    1 in filled_dict        # => False
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Looking up a non-existing key is a KeyError
+    filled_dict["four"]   # KeyError
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # Use "get()" method to avoid the KeyError
+    filled_dict.get("one")   # => 1
+    filled_dict.get("four")   # => None
+
+    # The get method supports a default argumen
+    # when the value is missing
+    filled_dict.get("one", 4)   # => 1
+    filled_dict.get("four", 4)   # => 4
+
+    # note that filled_dict.get("four") is still => None
+    # (get doesn't set the value in the dictionary)
+                        </code></pre>
+
+                        <pre><code class="python">
+    # set the value of a key with a syntax similar to lists
+    filled_dict["four"] = 4  # now, filled_dict["four"] => 4
+                        </code></pre>
+                     </section>
+
+                    <section>
+                        <pre><code class="python">
+    # "setdefault()" inserts into a dictionary
+    # only if the given key isn't present
+
+    # filled_dict["five"] is set to 5
+    filled_dict.setdefault("five", 5)
+
+    # filled_dict["five"] is still 5
+    filled_dict.setdefault("five", 6)
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Sets</h3>
+                </section>
+
+                <section>
+                    <h4>Sets</h4>
+                    <section>
+                        <pre><code class="python">
+    # Sets store ... well sets (which are like lists but can
+    # contain no duplicates)
+    empty_set = set()
+
+    # Initialize a "set()" with a bunch of values
+
+    # some_set is now set([1, 2, 3, 4])
+    some_set = set([1, 2, 2, 3, 4])
+                        </code></pre>
+
+                        <pre><code class="python">
+    # order is not guaranteed, even though it may sometimes
+    # look sorted
+
+    # another_set is now set([1, 2, 3, 4])
+    another_set = set([4, 3, 2, 2, 1])
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Since Python 2.7, {} can be used to declare a set
+    filled_set = {1, 2, 2, 3, 4}   # => {1, 2, 3, 4}
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # Add more items to a set
+    filled_set.add(5)   # filled_set is now {1, 2, 3, 4, 5}
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Do set intersection with &
+    other_set = {3, 4, 5, 6}
+    filled_set & other_set   # => {3, 4, 5}
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Do set union with |
+    filled_set | other_set   # => {1, 2, 3, 4, 5, 6}
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # Do set difference with -
+    {1, 2, 3, 4} - {2, 3, 5}   # => {1, 4}
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Check for existence in a set with in
+    2 in filled_set   # => True
+    10 in filled_set   # => False
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Control Flow</h2>
+                </section>
+
+                <section>
+                    <h3>Conditionals</h3>
+                </section>
+
+                <section>
+                    <h4>Conditionals</h4>
+                    <section>
+                        <pre><code class="python">
+    # Let's just make a variable
+    some_var = 5
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Here is an if statement.
+    # Indentation is significant in Python!
+
+    # prints "some_var is smaller than 10"
+    if some_var > 10:
+        print "some_var is totally bigger than 10."
+    elif some_var < 10:     # This elif clause is optional.
+        print "some_var is smaller than 10."
+    else:                   # This is optional too.
+        print "some_var is indeed 10."
+
+    # There is no switch statement in Python
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Loops</h3>
+                </section>
+
+                <section>
+                    <h4>Loops</h4>
+                    <section>
+                        <pre><code class="python">
+    """
+    For loops iterate over lists
+    prints:
+    dog is a mammal
+    cat is a mammal
+    mouse is a mammal
+    """
+    for animal in ["dog", "cat", "mouse"]:
+        # You can use {0} to interpolate formatted strings
+        print "{0} is a mammal".format(animal)
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    """
+    "range(number)" returns a list of numbers
+    from zero to the given number
+    prints:
+    0
+    1
+    2
+    3
+    """
+    for i in range(4):
+        print i
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    """
+    "range(lower, upper)" returns a list of numbers
+    from the lower number to the upper number
+    prints:
+    4
+    5
+    6
+    7
+    """
+    for i in range(4, 8):
+        print i
+                        </code></pre>
+
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    """
+    While loops go until a condition is no longer met.
+    prints:
+    0
+    1
+    2
+    3
+    """
+    x = 0
+    while x < 4:
+        print x
+        x += 1  # Shorthand for x = x + 1
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Exceptions</h3>
+                </section>
+
+                <section>
+                    <h4>Exceptions</h4>
+                    <section>
+                        <pre><code class="python">
+    try:
+        # Use "raise" to raise an error
+        raise IndexError("This is an index error")
+    except IndexError as e:
+        # Pass is just a no-op. Usually you would do recovery here.
+        pass
+    except (TypeError, NameError):
+        # Multiple exceptions can be handled together, if required.
+        pass
+    else:
+        # Optional clause to the try/except block.
+        # Must follow all except blocks
+        # Runs only if the code in try raises no exceptions
+        print "All good!"
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Functions</h2>
+                </section>
+
+                <section>
+                    <h3>Basics</h3>
+                </section>
+
+                <section>
+                    <h4>Basics</h4>
+                    <section>
+                        <pre><code class="python">
+    # Use "def" to create new functions
+    def add(x, y):
+        print "x is {0} and y is {1}".format(x, y)
+        return x + y    # Return values with a return statement
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Calling functions with parameters
+    add(5, 6)   # => prints out "x is 5 and y is 6" and returns 11
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Another way to call functions is with keyword arguments
+    add(y=6, x=5)   # Keyword arguments can arrive in any order.
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Variable Arguments</h3>
+                </section>
+
+                <section>
+                    <h4>Variable Arguments</h4>
+                    <section>
+                        <pre><code class="python">
+    # You can define functions that take a variable number of
+    # positional args, which will be interpreted as a tuple
+    # if you do not use the *
+    def varargs(*args):
+        return args
+
+    varargs(1, 2, 3)   # => (1, 2, 3)
+                        </code></pre>
+
+                        <pre><code class="python">
+    # You can define functions that take a variable number of
+    # keyword args, as well, which will be interpreted as a map
+    # if you do not use **
+    def keyword_args(**kwargs):
+        return kwargs
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Let's call it to see what happens
+
+    # {"big": "foot", "loch": "ness"}
+    keyword_args(big="foot", loch="ness")
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # You can do both at once, if you like
+    def all_the_args(*args, **kwargs):
+        print args
+        print kwargs
+    """
+    all_the_args(1, 2, a=3, b=4) prints:
+    (1, 2)
+    {"a": 3, "b": 4}
+    """
+                        </code></pre>
+
+                        <pre><code class="python">
+    # When calling functions, you can do the
+    # opposite of args/kwargs!
+    # Use * to expand positional args
+    # and use ** to expand keyword args.
+    args = (1, 2, 3, 4)
+    kwargs = {"a": 3, "b": 4}
+    all_the_args(*args)     # equivalent to foo(1, 2, 3, 4)
+    all_the_args(**kwargs)  # equivalent to foo(a=3, b=4)
+    # equivalent to foo(1, 2, 3, 4, a=3, b=4)
+    all_the_args(*args, **kwargs)
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # you can pass args and kwargs along to other functions that
+    # take args/kwargs by expanding them with * and ** respectively
+    def pass_all_the_args(*args, **kwargs):
+        all_the_args(*args, **kwargs)
+        print varargs(*args)
+        print keyword_args(**kwargs)
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Scope</h3>
+                </section>
+
+                <section>
+                    <h4>Scope</h4>
+                    <section>
+                        <pre><code class="python">
+    # Function Scope
+    x = 5
+
+    def setX(num):
+        # Local var x not the same as global variable x
+        x = num # => 43
+        print x # => 43
+
+    def setGlobalX(num):
+        global x
+        print x # => 5
+        x = num # global var x is now set to 6
+        print x # => 6
+
+    setX(43)
+    setGlobalX(6)
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>More on functions</h3>
+                </section>
+
+                <section>
+                    <h4>More on functions</h4>
+                    <section>
+                        <pre><code class="python">
+    # Python has first class functions
+    def create_adder(x):
+        def adder(y):
+            return x + y
+            return adder
+
+    add_10 = create_adder(10)
+    add_10(3)   # => 13
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # There are also anonymous functions
+    (lambda x: x > 2)(3)   # => True
+                        </code></pre>
+
+                        <pre><code class="python">
+    # There are built-in higher order functions
+    map(add_10, [1, 2, 3])                     # => [11, 12, 13]
+    filter(lambda x: x > 5, [3, 4, 5, 6, 7])   # => [6, 7]
+                        </code></pre>
+
+                        <pre><code class="python">
+    # We can use list comprehensions for nice maps and filters
+    [add_10(i) for i in [1, 2, 3]]          # => [11, 12, 13]
+    [x for x in [3, 4, 5, 6, 7] if x > 5]   # => [6, 7]
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Classes</h2>
+                </section>
+
+                <section>
+                    <h3>Defining a class</h3>
+                </section>
+
+                <section>
+                    <h4>Defining a class</h4>
+                    <section>
+                        <pre><code class="python">
+    # We subclass from object to get a class.
+    class Human(object):
+        # A class attribute.
+        # It is shared by all instances of this class
+        species = "H. sapiens"
+
+        # Basic initializer, this is called when this
+        # class is instantiated. Note that the double
+        # leading and trailing underscores denote objects
+        # or attributes that are used by python but that
+        # live in user-controlled namespaces. You should
+        # not invent such names on your own.
+        def __init__(self, name):
+            # Assign the argument to the instance's name attribute
+            self.name = name
+
+        # An instance method. All methods take "self" as
+        # the first argument
+        def say(self, msg):
+            return "{0}: {1}".format(self.name, msg)
+
+        # A class method is shared among all instances
+        # They are called with the calling class as
+        # the first argument
+        @classmethod
+        def get_species(cls):
+            return cls.species
+
+        # A static method is called without a class or
+        # instance reference
+        @staticmethod
+        def grunt():
+            return "*grunt*"
+                        </code></pre>
+                     </section>
+                 </section>
+
+                 <section>
+                    <h3>More on classes</h3>
+                 </section>
+
+                 <section>
+                     <h4>More on classes</h4>
+                     <section>
+                        <pre><code class="python">
+    # Instantiate a class
+    i = Human(name="Ian")
+    print i.say("hi")     # prints out "Ian: hi"
+
+    j = Human("Joel")
+    print j.say("hello")  # prints out "Joel: hello"
+                        </code></pre>
+
+                    <pre><code class="python">
+    # Call our class method
+    i.get_species()   # => "H. sapiens"
+                    </code></pre>
+
+                    <pre><code class="python">
+    # Change the shared attribute
+    Human.species = "H. neanderthalensis"
+    i.get_species()   # => "H. neanderthalensis"
+    j.get_species()   # => "H. neanderthalensis"
+                    </code></pre>
+
+                        <pre><code class="python">
+    # Call the static method
+    Human.grunt()   # => "*grunt*"
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Modules and Packages</h2>
+                </section>
+
+                <section>
+                    <h3>Modules</h3>
+                    <section>
+                        <pre><code class="python">
+    # You can import modules
+    import math
+    print math.sqrt(16)  # => 4
+                        </code></pre>
+
+                        <pre><code class="python">
+    # You can get specific functions from a module
+    from math import ceil, floor
+    print ceil(3.7)  # => 4.0
+    print floor(3.7)   # => 3.0
+                        </code></pre>
+
+                        <pre><code class="python">
+    # You can import all functions from a module.
+    # Warning: this is not recommended
+    from math import *
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # You can shorten module names
+    import math as m
+    math.sqrt(16) == m.sqrt(16)   # => True
+
+    # you can also test that the functions are equivalent
+    from math import sqrt
+    math.sqrt == m.sqrt == sqrt  # => True
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code class="python">
+    # Python modules are just ordinary python files. You
+    # can write your own, and import them. The name of the
+    # module is the same as the name of the file.
+                        </code></pre>
+
+                        <pre><code class="python">
+    # You can find out which functions and attributes
+    # defines a module.
+    import math
+    dir(math)
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Packages</h3>
+
+                    <section>
+                        <pre><code>
+    # Packages are namespaces which contain multiple packages
+    # and modules themselves. They are simply directories,
+    # but with a twist.
+                        </code></pre>
+                        <pre><code>
+    # Each package in Python is a directory which MUST contain
+    # a special file called __init__.py
+    #
+    #        physics/
+    #            __init__.py
+    #            classical.py
+    #            thermodynamics.py
+    #            electromagnetism.py
+    #            relativity.py
+    #            quantum.py
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code>
+    # __init__.py indicates that the directory is a Python package.
+    # Python packages can be imported the same way a module
+    # can be imported.
+                        </code></pre>
+                        <pre><code>
+    import physics.quantum
+                        </code></pre>
+                        <pre><code>
+    from physics.quantum import wave
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Pip</h2>
+                </section>
+
+                <section>
+                    <h4>What are Package Managers?</h4>
+
+                    <section>
+                        A package manager or package management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing software packages for a computer's operating system in a consistent manner.
+                    </section>
+
+                    <section>
+                        It typically maintains a database of software dependencies and version information to prevent software mismatches and missing prerequisites.
+                    </section>
+
+                    <section>
+                        Package managers are designed to save organizations time and money through remote administration and software distribution technology that eliminate the need for manual installs and updates.
+                    </section>
+
+                    <section>
+                        This can be particularly useful for large enterprises whose operating systems are based on Linux and other Unix-like systems, typically consisting of hundreds or even tens of thousands of distinct software packages.
+                    </section>
+                </section>
+
+                <section>
+                    <h4>What is Pip?</h4>
+
+                    <section>
+                        Pip is a package management system used to install and manage software packages written in Python.
+                    </section>
+
+                    <section>
+                        Pip is a recursive acronym that can stand for either "Pip Installs Packages" or "Pip Installs Python".
+                    </section>
+
+                    <section>
+                        It is analogous to Gems(Ruby), npm(Nodejs), Bower(frontend javascript), Composer(PHP) and the like.
+                    </section>
+
+                    <section>
+                        Packages are found in the Python Package Index(PyPi) site.
+                    </section>
+                </section>
+
+                <section>
+                    <h4>Installation</h4>
+
+
+                    <section>
+                        Download get-pip.py from
+                        <code>https://bootstrap.pypa.io/get-pip.py</code>
+                    </section>
+
+                    <section>
+                        Make sure you have Python installed and run the following (which may require administrator access)
+                        <pre>
+                        <code>python get-pip.py</code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        Done! :)
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Commands</h2>
+
+                    <section>
+                        <p>Searching packages</p>
+                        <pre><code>
+    pip search &lt;query&gt;
+                        </code></pre>
+
+                        <pre><code>
+    $ pip search peppercorn
+    pepperedform    - Helpers for using peppercorn with formprocess.
+    peppercorn      - A library for converting a token stream into [...]
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <p>Installing packages</p>
+                        <pre><code>
+    pip install &lt;package&gt;
+                        </code></pre>
+
+                        <pre><code>
+    $ pip install SomePackage            # latest version
+    $ pip install SomePackage==1.0.4     # specific version
+    $ pip install 'SomePackage>=1.0.4'     # minimum version
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <p>Uninstalling packages</p>
+                        <pre><code>
+    pip uninstall &lt;package&gt;
+                        </code></pre>
+
+                        <pre><code>
+    $ pip uninstall simplejson
+    Uninstalling simplejson:
+        /home/me/env/lib/python2.7/site-packages/simplejson
+        /home/me/env/lib/python2.7/site-packages/simplejson-2.2.1-py2.7.egg-info
+    Proceed (y/n)? y
+        Successfully uninstalled simplejson
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <p>Listing packages</p>
+                        <pre><code>
+    pip list [options]
+                        </code></pre>
+                        <pre><code>
+    $ pip list
+    docutils (0.10)
+    Jinja2 (2.7.2)
+    MarkupSafe (0.18)
+    Pygments (1.6)
+    Sphinx (1.2.1)
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <p>Showing information about a package</p>
+                        <pre><code>
+    pip show &lt;package&gt; ...
+                        </code></pre>
+                        <pre><code>
+    $ pip show sphinx
+    ---
+    Name: Sphinx
+    Version: 1.1.3
+    Location: /my/env/lib/pythonx.x/site-packages
+    Requires: Pygments, Jinja2, docutils
+                        </code></pre>
+                    </section>
+                </section>
+            </section>
+		</div>
+
+
+		<script src="revealjs/lib/js/head.min.js"></script>
+		<script src="revealjs/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'revealjs/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
