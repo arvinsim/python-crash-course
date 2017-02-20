@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>Introduction to Python</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/black.css">
@@ -27,14 +27,20 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h1>Python Essentials</h1>
+				<h1>Introduction to Python</h1>
+                        <img src="assets/images/python.png" alt="Python" height="200">
 			</section>
+
+                  <section>
+                        <h2>Overview</h4>
+                  </section>
 
 			<section>
 				<h4>Introduction to Python</h4>
 				<ul>
+					<li>Who created Python?</li>
 					<li>What is Python?</li>
-					<li>The Zen of Python</li>
+					<li>Why learn and use Python?</li>
 					<li>Organizations and sites that use Python</li>
 				</ul>
 			</section>
@@ -50,10 +56,22 @@
 					<li>Classes</li>
 					<li>Modules and Packages</li>
 				</ul>
+
+                        <aside class="notes">
+                              <p><strong>NOTE:</strong> There will be exercises for each of the sections to promote understanding</p>
+                        </aside>
 			</section>
 
+                  <section>
+                        <h4>Python Best Practices</h4>
+                        <ul>
+                              <li>The Zen of Python</li>
+                              <li>PEP 8 Style guide</li>
+                        </ul>
+                  </section>
+
 			<section>
-				<h4>Pip</h4>
+				<h4>Pip(If we have enough time)</h4>
 				<ul>
 					<li>What are Package Managers?</li>
 					<li>What is Pip?</li>
@@ -66,75 +84,81 @@
 				<h4>What is Python?</h4>
 			</section>
 
+                  <section>
+                        <h4>Who created Python?</h4>
+
+                        <section>
+                              <p>Python was created by Guido van Rossum, a Dutch computer programmer.</p>
+                              <img src="/assets/images/guido.jpg" alt="Guido Von Rossum" width="220" height="330"> 
+				</section>
+
+				<section>
+                              <p>He was employed by Google from 2005 until December 7 2012, where he spent half his time developing the Python language.
+                               In January 2013, Van Rossum started working on Dropbox.</p>
+                              <img src="/assets/images/google_icon.png" alt="Google"> 
+                              <img src="/assets/images/dropbox_icon.png" alt="Dropbox"> 
+				</section>
+
+				<section>
+                              <p>Python gets its name from the comedy group, Monty Python.</p>
+                              
+                              <img src="assets/images/monty_python.jpg" alt="Monty Python" />
+				</section>
+
+                        <section>
+                              <blockquote>
+                              I chose Python as a working title for the project, being in a slightly irreverent mood (and a big fan of Monty Python's Flying Circus). - Guido von Rossum
+                              </blockquote>
+                        </section>
+                  </section> 
+
 			<section>
 				<h4>What is Python?</h4>
 
-				<section>
-					Python is created by Guido van Rossum, a Dutch computer programmer. <br /><br />He was employed by Google from 2005
-					until December 7 2012, where he spent half his time developing the Python language. In January 2013, Van Rossum started
-					working on Dropbox.
+                        <section>
+					<p>Python is a multi-paradigm programming language. <em>Object-Oriented</em> and <em>Procedural</em> Programming is fully supported.</p>
+                              <p>Some <em>Functional</em> Programming features are supported.</p>
+
+                              <aside class="notes">
+                                    <p><strong>Object-oriented programming (OOP)</strong> is a programming paradigm based on the concept of "objects", which may contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods.</p>
+                                    <p><strong>Imperative programming</strong> is a programming paradigm that uses statements that change a program's state</p>
+                                    <p><strong>Functional programming</strong> languages are based around functions, usually the mathematical sense of functions. It avoids changing-state and mutable data.</p>
+                              </aside>
 				</section>
 
 				<section>
-					In the Python community, Van Rossum is known as a Benevolent Dictator For Life(BDFL), meaning that he continues to oversee
-					the Python development process, making decisions where necessary.
+                              <p>Python uses <em>dynamic</em> typing as opposed to <em>static</em> typing.</p>
+                              <p>Python is an <em>interpreted</em> language as opposed to being a <em>compiled</em> language.</p>
+
+                              <aside class="notes">
+                                    <p>A language is <strong>dynamically typed</strong> if the type is associated with run-time values, and not named variables/fields/etc. This means that you as a programmer can write a little quicker because you do not have to specify types every time (unless using a statically-typed language with type inference). Example: Perl, Ruby, Python</p>
+                                    <p>A language is <strong>statically typed</strong> if the type of a variable is known at compile time. For some languages this means that you as the programmer must specify what type each variable is (e.g.: Java, C, C++); other languages offer some form of type inference, the capability of the type system to deduce the type of a variable (e.g.: OCaml, Haskell, Scala)</p>
+
+                                    <p>A <strong>compiled language</strong> is a programming language whose implementations are compilers which generate machine code from source code), and not interpreters .</p>
+                                    <p>An <strong>interpreted language</strong> is a programming language whose implementations interpreters which executes code step by step, where no pre-runtime translation takes place.</p>
+                              </aside>
 				</section>
 
 				<section>
-					Python gets its name from the comedy group, Monty Python. <br /><br />They created the sketch comedy show Monty Python's
-					Flying Circus, that first aired on the BBC on October 5, 1969.
-				</section>
+                              <p>Python is well known for assigning significance to whitespace and indentation</p> 
+                              <p>Whitespace is used to delimit blocks rather than curly braces or keywords</p>
+                              <p>An increase in indentation comes after certain statements; a decrease in indentation signifies the end of the current block.</p>
 
-				<section>
-					Python is a multi-paradigm programming language. Object-Oriented and Structured Programming is fully supported. <br
-					/><br />Some Functional Programming features are supported.
-				</section>
-
-				<section>
-					Python uses dynamic typing.
-				</section>
-
-				<section>
-					Braces is not used to denote blocks in Python. Python uses whitespace for that. <br /><br />Suffice to say, whitespace
-					is significant in Python.
-				</section>
+                              <aside class="notes">
+                                    <p>Some Languages that uses curly braces: C, Java, PHP</p>
+                                    <p>Some languages that uses keywords: Visual Basic, Ruby</p>
+                              </aside>
+                        </section>
 			</section>
 
-			<section>
-				<h4>The Zen of Python</h4>
+                  <section>
+                        <h4>Why use Python?</h4>
 
-				<section>
-					Beautiful is better than ugly.
-				</section>
-
-				<section>
-					Explicit is better than implicit.
-				</section>
-
-				<section>
-					Simple is better than complex.
-				</section>
-
-				<section>
-					Complex is better than complicated.
-				</section>
-
-				<section>
-					Readability counts.
-				</section>
-
-				<section>
-					Errors should never pass silently.
-				</section>
-
-				<section>
-					There should be one, and preferably only one, obvious way to do it...
-				</section>
-
-				<section>
-					...although that way may not be obvious at first unless you're Dutch. :D
-				</section>
-			</section>
+                        <section>Quick to learn and very readable</section>
+                        <section>Lets you focus on your actual algorithms while abstracting a lot of low-level stuff and hence its quicker to get stuff done with Python.</section>
+                        <section>Testing a piece of code is so much more easier in Python. Open the Python interpreter and start testing it right away! :)</section>
+                        <section>Lots of open sources libraries available in python especially with regard to web development and data science projects.</section>
+                  </section>
 
 			<section>
 				<h4>Organizations and sites that use Python</h4>
@@ -144,6 +168,8 @@
 						<dt>Google</dt>
 						<dd>Many components of the Google spider and search engine are written in Python</dd>
 					</dl>
+
+                              <img src="assets/images/google_icon.png" alt="Google" />
 				</section>
 
 				<section>
@@ -152,6 +178,8 @@
 						<dd>The new addition to the legendary strategy game series has all its inner logic, including AI, implemented in Python.
 							The interface is exposed, so the modding community can easily take advantage of it.</dd>
 					</dl>
+
+                              <img src="assets/images/civilization_4_icon.png" alt="Civilization 4" height="200">
 				</section>
 
 				<section>
@@ -160,6 +188,8 @@
 						<dd>ILM uses Python in the production of their FX, as described in the RenderMan Course Notes from Siggraph 2001 (they
 							name "The Phantom Menace", "The Mummy Returns" and other productions as ones where Python was used...).</dd>
 					</dl>
+
+                              <img src="assets/images/industrial_light_and_magic.jpg" alt="Industrial Light and Magic" height="200">
 				</section>
 
 				<section>
@@ -167,6 +197,8 @@
 						<dt>Walt Disney Feature Animation</dt>
 						<dd>Walt Disney Feature Animation is also using Python to add scriptability to their animation production system.</dd>
 					</dl>
+
+                              <img src="assets/images/walt_disney_pictures.jpeg" alt="Walt Disney Feature Animation" height="200">
 				</section>
 
 				<section>
@@ -174,7 +206,24 @@
 						<dt>Blender 3D</dt>
 						<dd>The 3D modeling program Blender 3D makes use of Python as an extension language.</dd>
 					</dl>
+
+                              <img src="assets/images/blender.png" alt="Walt Disney Feature Animation" height="200">
 				</section>
+
+                        <section>
+                              <dl>
+                                    <dt>Data Science</dt>
+                                    <dd>Python libraries such as Numpy, Pandas and Scikit are very popular in the data science community.</dd>
+                              </dl>
+
+                              <img src="assets/images/scikit-learn.png" alt="Walt Disney Feature Animation" height="200">
+
+                              <aside class="notes">
+                                    <ul>
+                                          <li>What is Data Science?</li>
+                                    </ul>
+                              </aside>
+                        </section>
 
 				<section>
 					<ul>
@@ -238,24 +287,35 @@
     10 * 2  # => 20
     35 / 5  # => 7
                         </code></pre>
+                  </section>
 
-					<pre><code class="python">
-    # Division is a bit tricky.
-    # It is integer division and floors the results automatically.
+                  <section>
+                        <pre><code class="python">
+    # Division is a bit tricky in Python 2
+    # It is integer division and
+    # floors the results automatically.
     5 / 2  # => 2
                         </code></pre>
-				</section>
 
-				<section>
+                        <pre><code class="python">
+    # In Python 3, it is what you would expect
+    5 / 2  # => 2.5
+                        </code></pre>
+                  </section>
+
+                  <section>
 					<pre><code class="python">
-    # To fix division we need to learn about floats.
-    2.0         # This is a float
-    11.0 / 4.0  # => 2.75 ahhh...much better
+    # These are floats
+    # Doing operations on floats and integers will
+    # result in floats
+    2.0 + 3.0 = 5.0
+    1 - 3.5 = -2.5
+    2 * 9.0 # 18.0
+    10 / 2.0 # 5.0
                         </code></pre>
 
 					<pre><code class="python">
-    # Result of integer division truncated down both for
-    # positive and negative.
+    # If we want to do integer division, we use the // operator 
     5 // 3      # => 1
     5.0 // 3.0  # => 1.0 # works on floats too
     -5 // 3     # => -2
@@ -281,6 +341,25 @@
 				</section>
 			</section>
 
+                  <section>
+                        <h4>Exercises: Numbers</h4>
+
+                        Create python code that checks if a number is even.
+
+                        <pre><code class="python">
+      # Use this code to get input from user 
+      user_input = input("Enter a number")
+
+      # Use this template 
+      """
+      if 'condition here':
+           "print('This number is even')
+      else:
+            print('This number is odd')
+      """
+                        </code></pre>
+                  </section>
+
 
 			<section>
 				<h3>Boolean</h3>
@@ -297,7 +376,7 @@
                         </code></pre>
 
 					<pre><code class="python">
-    # Note using Bool operators with ints
+    # Note using Bool operators with Integers
     0 and 2 #=> 0
     -5 or 0 #=> -5
     0 == False #=> True
@@ -324,7 +403,9 @@
     1 != 1  # => False
     2 != 1  # => True
                         </code></pre>
+                        </section>
 
+                        <section>
 					<pre><code class="python">
     # More comparisons
     1 < 10  # => True
@@ -1198,6 +1279,7 @@
 				</section>
 			</section>
 
+                 
 			<section>
 				<h3>Packages</h3>
 
@@ -1235,6 +1317,50 @@
                         </code></pre>
 				</section>
 			</section>
+
+                  <section>
+                        <h2>Python Best Practices</h3>
+                  </section>
+
+                  <section>
+				<h4>The Zen of Python</h4>
+
+				<section>
+					Beautiful is better than ugly.
+				</section>
+
+				<section>
+					Explicit is better than implicit.
+				</section>
+
+				<section>
+					Simple is better than complex.
+				</section>
+
+				<section>
+					Complex is better than complicated.
+				</section>
+
+				<section>
+					Readability counts.
+				</section>
+
+				<section>
+					Errors should never pass silently.
+				</section>
+
+				<section>
+					There should be one, and preferably only one, obvious way to do it.
+				</section>
+			</section>
+
+                  <section>
+                        <h4>PEP 8 Style Guide</h4>
+
+                        <section> 
+                              https://www.python.org/dev/peps/pep-0008/
+                        </section>
+                  </section>
 
 			<section>
 				<h2>Pip</h2>
