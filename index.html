@@ -40,7 +40,8 @@
 				<ul>
 					<li>Who created Python?</li>
 					<li>What is Python?</li>
-					<li>Why learn and use Python?</li>
+					<li>Why learn Python?</li>
+					<li>What is Python good at?</li>
 					<li>Organizations and sites that use Python</li>
 				</ul>
 			</section>
@@ -152,12 +153,32 @@
 			</section>
 
                   <section>
-                        <h4>Why use Python?</h4>
+                        <h4>Why learn Python?</h4>
 
                         <section>Quick to learn and very readable</section>
                         <section>Lets you focus on your actual algorithms while abstracting a lot of low-level stuff and hence its quicker to get stuff done with Python.</section>
                         <section>Testing a piece of code is so much more easier in Python. Open the Python interpreter and start testing it right away! :)</section>
                         <section>Lots of open sources libraries available in python especially with regard to web development and data science projects.</section>
+                  </section>
+
+                  <section>
+                        <h4>What is Python good at?</h4>
+
+                        <section>
+                              <p>Prototyping</p>
+                        </section>
+                        
+                        <section>
+                              <p>Web Development</p>
+                        </section>
+
+                        <section>
+                              <p>Machine Learning and Data Analysis</p>
+                        </section>
+
+                        <section>
+                              <p>Scientific Programming</p>
+                        </section>
                   </section>
 
 			<section>
@@ -422,6 +443,37 @@
 				</section>
 			</section>
 
+                  <section>
+                        <h4>Exercises: Boolean</h4>
+
+                        <section>
+                        <p>The squirrels in Palo Alto spend most of the day playing. In particular, they play if the temperature is between 60 and 90 (inclusive). Unless it is summer, then the upper limit is 100 instead of 90. Given an int temperature and a boolean is_summer, return True if the squirrels play and False otherwise.</p>
+
+                        </section>
+
+                        <section>
+                              <pre><code class="python">
+      # temperature is 70, it is not summer
+      squirrel_play(70, False) # True
+
+      # temperature is 95, it is not summer
+      squirrel_play(95, False) # False
+
+      # temperature is 95, it is summmer
+      squirrel_play(95, True) # True.
+                              </code></pre>
+                        </section>
+
+                        <section>
+                              <pre><code class="python">
+      def squirrel_play(temp, is_summer):
+            # return True if squirrels play
+            # return False if squirrels don't play
+            pass
+                              </code></pre>
+                        </section>
+                  </section>
+
 			<section>
 				<h3>Strings</h3>
 			</section>
@@ -460,16 +512,37 @@
     "%s can be %s" % ("strings", "interpolated")
                         </code></pre>
 
-					<pre><code class="python">
+				</section>
+
+                        <section>
+                              <pre><code class="python">
     # A newer way to format strings is the format method.
     # This method is the preferred way
     "{0} can be {1}".format("strings", "formatted")
 
     # You can use keywords if you don't want to count.
-    "{name} wants to eat {food}".format(name="Bob", food="lasagna")
-                        </code></pre>
-				</section>
+    "{name} wants to eat {food}".format(
+          name="Bob",
+          food="lasagna"
+    )
+                              </code></pre>
+                        </section>
+
 			</section>
+
+                  <section>
+                        <h4>Exercises: Strings</h4>
+
+                        <section>
+                              <p>Implement code that gets the input string then prints out the first and last character of that string.</p>
+                              <pre><code class="python">
+    input_string = input("Enter a string")
+    # If the input is "Hello World", the output should be
+    # "The first character of the input string is H 
+    # and the last character is d."
+                              </code></pre>
+                        </section>
+                  </section>
 
 			<section>
 				<h3>None</h3>
@@ -484,8 +557,8 @@
                         </code></pre>
 
 					<pre><code class="python">
-    # Don't use the equality "==" symbol to compare objects to None
-    # Use "is" instead
+    # Don't use the equality "==" symbol to compare objects 
+    # to None. Use "is" instead
     "etc" is None   # => False
     None is None    # => True
 
@@ -525,9 +598,12 @@
     some_var = 5
     some_var  # => 5
                         </code></pre>
+                        </section>
 
+                        <section>
 					<pre><code class="python">
-    # Accessing a previously unassigned variable is an exception.
+    # Accessing a previously unassigned variable 
+    # raises an exception.
     some_other_var  # Raises a name error
                         </code></pre>
 
@@ -557,14 +633,14 @@
     # Add stuff to the end of a list with append
     li.append(1)    # li is now [1]
     li.append(2)    # li is now [1, 2]
-    li.append(4)    # li is now [1, 2, 4]
-    li.append(3)    # li is now [1, 2, 4, 3]
+    li.append(3)    # li is now [1, 2, 3]
+    li.append(4)    # li is now [1, 2, 3, 4]
 
     # Remove from the end with pop
-    li.pop()        # => 3 and li is now [1, 2, 4]
+    li.pop()        # => 4 and li is now [1, 2, 3]
 
     # Let's put it back
-    li.append(3)    # li is now [1, 2, 4, 3] again.
+    li.append(4)    # li is now [1, 2, 3, 4] again.
                         </code></pre>
 				</section>
 
@@ -590,6 +666,38 @@
 				</section>
 			</section>
 
+                  <section>
+				<h4>More on lists</h4>
+				<section>
+					<pre><code class="python">
+    # Remove arbitrary elements from a list with "del"
+    del li[2]   # li is now [1, 2, 3]
+
+    # You can add lists
+    li + other_li   # => [1, 2, 3, 4, 5, 6]
+
+    # Note: values for li and for other_li are not modified.
+                        </code></pre>
+
+					<pre><code class="python">
+    # Concatenate lists with "extend()"
+    li.extend(other_li)   # Now li is [1, 2, 3, 4, 5, 6]
+                        </code></pre>
+				</section>
+
+                        <section>
+                        <pre><code class="python">
+    # Check for existence in a list with "in"
+    1 in li   # => True
+                        </code></pre>
+
+                        <pre><code class="python">
+    # Examine the length with "len()"
+    len(li)   # => 6
+                        </code></pre>
+                        </section>
+			</section>
+
 			<section>
 				<h3>Slices</h3>
 			</section>
@@ -608,6 +716,11 @@
     # Omit the beginning
     li[2:]  # => [4, 3]
 
+                        </code></pre>
+				</section>
+
+                        <section>
+                              <pre><code class="python">
     # Omit the end
     li[:3]  # => [1, 2, 4]
 
@@ -616,8 +729,8 @@
 
     # Reverse a copy of the list
     li[::-1]   # => [3, 4, 2, 1]
-                        </code></pre>
-				</section>
+                              </code></pre>
+                        </section>
 
 				<section>
 					<pre><code class="python">
@@ -627,35 +740,26 @@
 				</section>
 			</section>
 
-			<section>
-				<h4>More on lists</h4>
-				<section>
-					<pre><code class="python">
-    # Remove arbitrary elements from a list with "del"
-    del li[2]   # li is now [1, 2, 3]
+                  <section>
+                        <h4>Exercises: Slices</h4>
 
-    # You can add lists
-    li + other_li   # => [1, 2, 3, 4, 5, 6]
+                        <section>
+                              <p>Implement code to check if the string is a palindrome.</p> 
+                              <p>A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward, such as madam or kayak.</p>
+                        </section>
 
-    # Note: values for li and for other_li are not modified.
-                        </code></pre>
+                        <section>
+                              <pre><code class="python">
+      str = input('Enter a string')
 
-					<pre><code class="python">
-    # Concatenate lists with "extend()"
-    li.extend(other_li)   # Now li is [1, 2, 3, 4, 5, 6]
-                        </code></pre>
-
-					<pre><code class="python">
-    # Check for existence in a list with "in"
-    1 in li   # => True
-                        </code></pre>
-
-					<pre><code class="python">
-    # Examine the length with "len()"
-    len(li)   # => 6
-                        </code></pre>
-				</section>
-			</section>
+      # You don't need to use a loop to check
+      if 'condition here':
+            print('{} is a palindrome'.format(str))
+      else:
+            print('{} is not a palindrome'.format(str))
+                              </code></pre>
+                        </section>
+                  </section>
 
 			<section>
 				<h3>Tuples</h3>
@@ -678,18 +782,21 @@
     tup[:2]   # => (1, 2)
     2 in tup   # => True
                         </code></pre>
+				</section>
 
+                        <section>
 					<pre><code class="python">
     # You can unpack tuples (or lists) into variables
-    a, b, c = (1, 2, 3)     # a is now 1, b is now 2 and c is now 3
+    a, b, c = (1, 2, 3)     # a = 1, b = 2, c = 3
 
-    # Tuples are created by default if you leave out the parentheses
+    # Tuples are created by default if you leave out 
+    # the parentheses
     d, e, f = 4, 5, 6
 
     # Now look how easy it is to swap two values
-    e, d = d, e     # d is now 5 and e is now 4
+    e, d = d, e     # d = 5, e = 4
                         </code></pre>
-				</section>
+                        </section>
 			</section>
 
 			<section>
@@ -698,6 +805,7 @@
 
 			<section>
 				<h4>Dictionaries</h4>
+
 				<section>
 					<pre><code class="python">
     # Dictionaries store mappings
@@ -719,6 +827,12 @@
     # Note - Dictionary key ordering is not guaranteed.
     # Your results might not match this exactly.
                         </code></pre>
+
+                        <aside class="notes">
+                              <p>A Dictionary in Python is a collection of unordered values accessed by key rather than by index.</p>   
+                              <p>Dictionaries are also called hashes or associative arrays</p>
+                              <p>Dictionaries are best used for a collection of data that is not sorted and where the keys are meaningful</p>
+                        </aside>
 				</section>
 
 				<section>
@@ -776,6 +890,16 @@
 				</section>
 			</section>
 
+                  <section>
+                        <h4>Exercises: Dictionaries</h4>
+
+                        <section>
+                              <p>Ask the user for his/her name, age and sex.</p>
+                              <p>Store this data in a dictionary and then print out this string</p>
+                              <p>"My name is John Doe and I am a 21 years old male."</p>
+                        </section>
+                  </section>
+
 			<section>
 				<h3>Sets</h3>
 			</section>
@@ -784,12 +908,10 @@
 				<h4>Sets</h4>
 				<section>
 					<pre><code class="python">
-    # Sets store ... well sets (which are like lists but can
-    # contain no duplicates)
+    # Sets are like lists but can # contain no duplicates
     empty_set = set()
 
     # Initialize a "set()" with a bunch of values
-
     # some_set is now set([1, 2, 3, 4])
     some_set = set([1, 2, 2, 3, 4])
                         </code></pre>
@@ -801,10 +923,18 @@
     # another_set is now set([1, 2, 3, 4])
     another_set = set([4, 3, 2, 2, 1])
                         </code></pre>
+                        </section>
 
+                        <section>
 					<pre><code class="python">
     # Since Python 2.7, {} can be used to declare a set
     filled_set = {1, 2, 2, 3, 4}   # => {1, 2, 3, 4}
+                        </code></pre>
+                        <pre><code class="python">
+    # Strings can also be used to initialize sets
+
+    # {'r', 'n', 'm', 'a', 'g'}
+    set('anagram')
                         </code></pre>
 				</section>
 
@@ -815,30 +945,70 @@
                         </code></pre>
 
 					<pre><code class="python">
-    # Do set intersection with &
-    other_set = {3, 4, 5, 6}
-    filled_set & other_set   # => {3, 4, 5}
-                        </code></pre>
-
-					<pre><code class="python">
-    # Do set union with |
-    filled_set | other_set   # => {1, 2, 3, 4, 5, 6}
-                        </code></pre>
-				</section>
-
-				<section>
-					<pre><code class="python">
-    # Do set difference with -
-    {1, 2, 3, 4} - {2, 3, 5}   # => {1, 4}
-                        </code></pre>
-
-					<pre><code class="python">
     # Check for existence in a set with in
     2 in filled_set   # => True
     10 in filled_set   # => False
                         </code></pre>
 				</section>
 			</section>
+
+                  <section>
+                        <h4>Set Operations</h4>
+
+                        <section>
+                             <pre><code class="python">
+      a = {1, 2, 3, 4}                              
+      b = {3, 4, 5, 6}
+
+      # Intersection
+      a & b  # {3, 4}
+
+      # Union
+      a | b  # {1, 2, 3, 4, 5, 6}
+                              </code></pre> 
+                        </section>
+
+                        <section>
+                              <pre><code class="python">
+      # Difference(it is not communicative)
+      a - b # {1, 2}
+      b - a # {5, 6}
+
+      # Symmetric Difference
+      a ^ b # {1, 2, 5, 6}
+                              </code></pre>
+                        </section>
+
+                        <section>
+                              <pre><code class="python">
+    x = {1, 2}
+    y = {1, 2, 3, 4}                                    
+
+    # Subset test
+    x <= y # True
+    y <= x # False
+
+    # Superset test
+    y >= x # True
+    x >= y # False
+                              </code></pre>
+                        </section>
+                  </section>
+
+            <section>
+                <h4>Exercise: Sets</h4>
+
+                <section>
+                    <p>Ask the user for two strings. Then using only sets, find the letters that are common to both of them</p>
+
+                    <pre><code class="python">
+    str1 = input('Enter first string')
+    str2 = input('Enter second string')
+
+    # Implement code
+                    </code></pre>
+                </section>
+            </section>
 
 			<section>
 				<h2>Control Flow</h2>
